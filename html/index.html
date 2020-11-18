@@ -3,22 +3,19 @@
     <head>
         <meta charset="utf-8">
         <title>SIRIUS Gastronomy</title>
+        <link rel="stylesheet" href="css/estilo.css">
     </head>
     <body>
         <header>
-            <nav>
+            <nav class="lista-navegacion">
                 <ul>
                     <li><a href="pages/productos.html">Productos</a></li>
                     <li><a href="pages/servicios.html">Servicios</a></li>
-                </ul>
-            </nav>
-            <div>
-                <a href="index.html">
-                    <img src="" alt="logo">
-                </a>
-            </div>
-            <nav>
-                <ul>
+                    <li class="logo">
+                        <a href="index.html">
+                            <img src="https://i.dlpng.com/static/png/6725622_preview.png" alt="logo">
+                        </a>
+                    </li>
                     <li><a href="pages/quienes-somos.html">Quines Somos</a></li>
                     <li><a href="pages/contacto.html">Contacto</a></li>
                 </ul>
@@ -31,8 +28,10 @@
                 <h3></h3>
             </section>
             <section>
-                <h2>Nuestros Productos</h2>
-                <table>
+                <table id="tabla-productos-destacados">
+                    <tr>
+                        <th colspan="4">Nuestros Productos</th>
+                    </tr>
                     <tr>
                         <td>
                             <img src="" alt="prodcto 1">
