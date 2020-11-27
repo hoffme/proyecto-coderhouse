@@ -1,3 +1,4 @@
+/* ----- GENERAL ----- */
 body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
@@ -8,6 +9,10 @@ header {
     width: 100%;
     background-color: chocolate;
     text-align: center;
+    position: sticky;
+    top: 0;
+    box-shadow: 1px 1px 5px #999;
+    padding: 1rem 0;
 }
 header a {
     text-decoration: none;
@@ -15,29 +20,7 @@ header a {
     font-weight: bold;
 }
 
-.lista-navegacion {
-    display: inline-block
-}
-.lista-navegacion ul {
-    list-style: none;
-    padding: 0;
-    margin-left: 10px;
-}
-.lista-navegacion ul li {
-    display: inline-block;
-}
-
-.logo {
-    width: 200px;
-    display: inline-block;
-}
-.logo img {
-    width: 100px;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    color: chocolate;
-}
+h1, h2, h3, h4, h5, h6 { color: chocolate; }
 h2 {
     font-style: italic;
     font-size: 2.5rem;
@@ -48,19 +31,80 @@ h3 {
     text-decoration: underline;
 }
 
-#productos-nav ul {
-    list-style: square;
-    list-style-position: inside;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-main {
+section { padding: 1%; }
+section.anchoAjustable {
     width: 100%;
     max-width: 1000px;
     margin: auto; 
+    text-align: center;
 }
 
+footer { text-align: center; }
+
+.lista-navegacion { display: inline-block }
+.lista-navegacion ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.lista-navegacion ul li {
+    display: inline-block;
+    padding: 0 1.5rem;
+    vertical-align: middle;
+    position: relative;
+}
+.lista-navegacion ul ul {
+    position: absolute;
+    display: none;
+    background-color: chocolate;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px black;
+}
+.lista-navegacion ul ul li {
+    display: block;
+    padding: 0.5rem;
+    width: 150px;
+}
+.lista-navegacion ul li:hover ul {
+    display: block;
+}
+
+.logo {
+    width: 200px;
+    display: inline-block;
+}
+.logo img { width: 100px; }
+
+.seccion-productos article {
+    display: inline-block;
+    width: 20%;
+}
+.seccion-productos article img {
+    width: 90%;
+    object-fit: cover;
+}
+.seccion-productos h3 { text-align: left; }
+
+/* ----- PAGINA PRODUCTOS ----- */
+#productos-nav ul {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: chocolate;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px #999;
+}
+#productos-nav ul li {
+    display: inline;
+    padding: 0 2rem;
+}
+#productos-nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* ----- PAGINA INICIAL ----- */
 #banner-principal {
     width: 100%;
     height: 40vh;
@@ -68,5 +112,14 @@ main {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    text-align: left;
+}
+
+/* ----- PAGINA CONTACTO ----- */
+#formularioContacto {
+    border-radius: 5px;
+    padding: 1rem;
+    border: 1px solid #999;
+    background-color: white;
     text-align: left;
 }
