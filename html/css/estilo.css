@@ -7,12 +7,13 @@ body {
 
 header {
     width: 100%;
-    background-color: chocolate;
+    background-image: radial-gradient(circle, chocolate, rgb(133, 70, 25));
     text-align: center;
     position: sticky;
     top: 0;
-    box-shadow: 1px 1px 5px #999;
+    box-shadow: 1px 1px 5px rgb(88, 88, 88);
     padding: 1rem 0;
+    z-index: 1;
 }
 header a {
     text-decoration: none;
@@ -41,7 +42,18 @@ section.anchoAjustable {
     text-align: center;
 }
 
-footer { text-align: center; }
+footer {
+    padding: 2rem 0;
+    text-align: center;
+    background-color: chocolate;
+    box-shadow: 1px 1px 10px #999;
+    color: white;
+    display: flex;
+    flex-direction: row;
+}
+footer span {
+    flex: 1;
+}
 
 .lista-navegacion { display: inline-block }
 .lista-navegacion ul {
@@ -81,18 +93,25 @@ footer { text-align: center; }
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    margin: 1rem 0;
 }
 .seccion-productos h3 {
     flex-basis: 100%;
 }
 .seccion-productos article {
-    flex-basis: 25%;
+    flex-basis: 23%;
+    margin: 0 1%;
 }
 .seccion-productos article img {
     width: 90%;
     object-fit: cover;
 }
 .seccion-productos h3 { text-align: left; }
+.seccion-productos article:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 15px lightblue;
+    border-radius: 0.5rem;
+}
 
 /* ----- PAGINA PRODUCTOS ----- */
 #productos-nav ul {
@@ -134,14 +153,6 @@ footer { text-align: center; }
 }
 
 /* ----- PAGINA INICIAL ----- */
-#banner-principal {
-    height: 40vh;
-    background-image: url("https://www.casafe.org/wp-content/uploads/2017/09/foto-medialunas.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    text-align: left;
-}
 #home-grid {
     width: 100%;
     display: grid;
@@ -159,6 +170,23 @@ footer { text-align: center; }
 #seccion-servicios img { width: 100%; }
 #seccion-punto-venta { grid-area: punto-venta; }
 #seccion-punto-venta img { width: 100%; }
+
+#banner-principal {
+    height: 40vh;
+    background-image: url("https://www.casafe.org/wp-content/uploads/2017/09/foto-medialunas.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: left;
+    animation-duration: 1s;
+    animation-name: disfuminado;
+    animation-timing-function: ease-in;
+}
+
+@keyframes disfuminado {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
 
 /* ----- PAGINA CONTACTO ----- */
 #formularioContacto {
