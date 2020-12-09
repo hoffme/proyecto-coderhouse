@@ -87,7 +87,11 @@ footer span {
     width: 200px;
     display: inline-block;
 }
-.logo img { width: 100px; }
+.logo img {
+    width: 100px;
+    object-fit: contain;
+    max-height: 50px;
+}
 
 .seccion-productos {
     display: flex;
@@ -195,4 +199,13 @@ footer span {
     border: 1px solid #999;
     background-color: white;
     text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+}
+#formularioContacto div {
+    padding: 1%;
+}
+#formularioContacto .boton-principal {
+    background-color: chocolate;
+    border: chocolate;
 }
