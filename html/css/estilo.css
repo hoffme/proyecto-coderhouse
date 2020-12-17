@@ -6,13 +6,15 @@ body {
 }
 
 header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     background-image: radial-gradient(circle, chocolate, rgb(133, 70, 25));
     text-align: center;
     position: sticky;
     top: 0;
-    box-shadow: 1px 1px 5px rgb(88, 88, 88);
-    padding: 1rem 0;
+    box-shadow: 1px 1px 5px rgb(7, 6, 6);
     z-index: 1;
 }
 header a {
@@ -21,15 +23,16 @@ header a {
     font-weight: bold;
 }
 
-h1, h2, h3, h4, h5, h6 { color: chocolate; }
+h1, h2, h3, h4, h5, h6 { color: chocolate !important; }
 h2 {
-    font-style: italic;
-    font-size: 2.5rem;
-    font-family: 'Dancing Script', cursive;
+    margin: 1.5rem auto !important;
+    font-style: italic !important;
+    font-size: 2.5rem !important;
+    font-family: 'Dancing Script', cursive !important;
 }
 h3 {
-    font-size: 1.5rem;
-    text-decoration: underline;
+    font-size: 1.5rem !important;
+    text-decoration: underline !important;
 }
 
 section {
@@ -55,8 +58,35 @@ footer span {
     flex: 1;
 }
 
-.lista-navegacion { display: inline-block }
+#top-banner-header {
+    background-color: #212121be;
+    color: white;
+    font-size: 0.75em;
+    font-weight: bold;
+    text-align: left;
+    padding: 5px calc(50% - 500px);
+    width: 100%;
+    max-width: 1000px;
+    margin: auto; 
+    display: flex;
+    flex-direction: row;
+    box-sizing: content-box;
+}
+#top-banner-header label.ancho-completo {
+    flex: 1;
+}
+#top-banner-header label { margin: 0; }
+
+.lista-navegacion {
+    display: inline-block;
+    background-color: #00000030;
+    width: 100%;
+    padding: 0.5rem 0;
+}
 .lista-navegacion ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -68,8 +98,10 @@ footer span {
     position: relative;
 }
 .lista-navegacion ul ul {
+    z-index: 1;
     position: absolute;
     display: none;
+    flex-direction: column;
     background-color: chocolate;
     border-radius: 5px;
     box-shadow: 1px 1px 5px black;
@@ -80,10 +112,11 @@ footer span {
     width: 150px;
 }
 .lista-navegacion ul li:hover ul {
-    display: block;
+    display: flex;
 }
 
 .logo {
+    padding: 1rem;
     width: 200px;
     display: inline-block;
 }
@@ -97,7 +130,8 @@ footer span {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 1rem 0;
+    margin: 1rem auto;
+    width: 90%;
 }
 .seccion-productos h3 {
     flex-basis: 100%;
@@ -176,7 +210,7 @@ footer span {
 #seccion-punto-venta img { width: 100%; }
 
 #banner-principal {
-    height: 40vh;
+    height: 100%;
     background-image: url("https://www.casafe.org/wp-content/uploads/2017/09/foto-medialunas.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -208,4 +242,43 @@ footer span {
 #formularioContacto .boton-principal {
     background-color: chocolate;
     border: chocolate;
+}
+
+.mapa {
+    height: 30vh;
+    width: 100%;
+    border-radius: 5px;
+}
+
+
+@media (max-width: 800px) {
+    .seccion-productos article {
+        flex-basis: 40%;
+        margin: 5%;
+    }
+    #productos-nav {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    #top-banner-header { display: none; }
+    header .lista-navegacion ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    header .lista-navegacion ul li {
+        width: 90%;
+        padding: 0.5rem;
+        margin: 0.5rem 0;
+        border-radius: 5px;
+        box-shadow: 1px 1px 5px black;
+    }
+    header .lista-navegacion ul ul {
+        width: 90%;
+        justify-content: center;
+    }
+    .seccion-productos article {
+        flex-basis: 98%;
+    }
 }
