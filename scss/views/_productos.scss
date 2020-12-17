@@ -1,0 +1,26 @@
+#productos-nav ul {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: chocolate;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px #999;
+    margin: 0;
+    padding: 1rem;
+    width: calc(100% - 2rem);
+}
+#productos-nav ul li {
+    display: inline;
+    padding: 0 2rem;
+}
+#productos-nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+@media (max-width: $max-pantalla-mediana) {
+    #productos-nav {
+        display: none;
+    }
+}

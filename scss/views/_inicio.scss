@@ -1,0 +1,34 @@
+#home-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto minmax(100%, 1000px) auto;
+    grid-template-rows: 50vh repeat(4, auto);
+    grid-template-areas: 
+        "banner banner banner"
+        ". productos ."
+        ". servicios ."
+        ". punto-venta .";
+}
+#banner-principal { grid-area: banner; }
+#seccion-productos { grid-area: productos; }
+#seccion-servicios { grid-area: servicios; }
+#seccion-servicios img { width: 100%; }
+#seccion-punto-venta { grid-area: punto-venta; }
+#seccion-punto-venta img { width: 100%; }
+
+#banner-principal {
+    height: 100%;
+    background-image: url("https://www.casafe.org/wp-content/uploads/2017/09/foto-medialunas.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: left;
+    animation-duration: 1s;
+    animation-name: disfuminado;
+    animation-timing-function: ease-in;
+}
+
+@keyframes disfuminado {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

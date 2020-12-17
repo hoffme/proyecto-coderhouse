@@ -1,0 +1,22 @@
+#formularioContacto {
+    border-radius: 5px;
+    padding: 1rem;
+    border: 1px solid #999;
+    background-color: white;
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+}
+#formularioContacto div {
+    padding: 1%;
+}
+#formularioContacto .boton-principal {
+    background-color: chocolate;
+    border: chocolate;
+}
+
+.mapa {
+    height: 30vh;
+    width: 100%;
+    border-radius: 5px;
+}
