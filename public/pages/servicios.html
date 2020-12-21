@@ -7,6 +7,9 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="../css/estilo.css">
+        <script type="text/javascript" src="../js/navegacion.js"></script>
+        <!-- Font Awesome -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
     </head>
     <body>
         <header>
@@ -19,7 +22,10 @@
                     <img src="../images/logo.png" alt="logo">
                 </a>
             </div>
-            <nav class="lista-navegacion">
+            <nav id="navegacion" class="topnav lista-navegacion">
+                <a href="javascript:void(0);" class="icon button button-nav" onclick="activacionNavegacion()">
+                    <i class="fa fa-bars"></i>
+                </a>
                 <ul>
                     <li>
                         <a href="productos.html">Productos</a>

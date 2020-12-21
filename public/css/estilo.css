@@ -74,7 +74,7 @@ header {
   text-align: center;
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 3;
   width: 100%;
   background-image: radial-gradient(circle, chocolate, #854619);
   box-shadow: 1px 1px 5px #070606; }
@@ -116,19 +116,7 @@ header .header__logo img {
 
 @media (max-width: 576px) {
   .header__top {
-    display: none; }
-  header .lista-navegacion ul {
-    flex-direction: column;
-    align-items: center; }
-  header .lista-navegacion ul li {
-    width: 90%;
-    padding: 0.5rem;
-    margin: 0.5rem 0;
-    border-radius: 5px;
-    box-shadow: 1px 1px 5px black; }
-  header .lista-navegacion ul ul {
-    width: 90%;
-    justify-content: center; } }
+    display: none !important; } }
 
 .lista-navegacion {
   display: inline-block;
@@ -167,6 +155,35 @@ header .header__logo img {
 .lista-navegacion ul li:hover ul {
   display: flex; }
 
+.lista-navegacion a:hover {
+  color: #3d1a00; }
+
+.lista-navegacion .icon {
+  display: none; }
+
+.button-nav {
+  margin-right: 2%; }
+
+@media screen and (max-width: 576px) {
+  .lista-navegacion ul {
+    display: none;
+    flex-direction: column;
+    align-items: center; }
+  .lista-navegacion ul li {
+    width: 90%;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px black; }
+  .lista-navegacion ul ul {
+    width: 90%;
+    justify-content: center; }
+  .lista-navegacion a.icon {
+    float: right;
+    display: block; }
+  .lista-navegacion.deplegada > ul {
+    display: flex; } }
+
 section, .seccion {
   padding: 1%; }
 
@@ -201,7 +218,7 @@ section.seccion-centrada, .section.seccion-centrada {
   width: 100%;
   display: grid;
   grid-template-columns: auto minmax(100%, 1000px) auto;
-  grid-template-rows: 50vh repeat(4, auto);
+  grid-template-rows: auto repeat(4, auto);
   grid-template-areas: "banner banner banner" ". productos ." ". servicios ." ". punto-venta ."; }
 
 #banner-principal {
@@ -223,15 +240,7 @@ section.seccion-centrada, .section.seccion-centrada {
   width: 100%; }
 
 #banner-principal {
-  height: 100%;
-  background-image: url("https://www.casafe.org/wp-content/uploads/2017/09/foto-medialunas.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  text-align: left;
-  animation-duration: 1s;
-  animation-name: disfuminado;
-  animation-timing-function: ease-in; }
+  padding: 0 !important; }
 
 @keyframes disfuminado {
   from {

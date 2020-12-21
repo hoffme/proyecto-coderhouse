@@ -2,7 +2,7 @@
     width: 100%;
     display: grid;
     grid-template-columns: auto minmax(100%, 1000px) auto;
-    grid-template-rows: 50vh repeat(4, auto);
+    grid-template-rows: auto repeat(4, auto);
     grid-template-areas: 
         "banner banner banner"
         ". productos ."
@@ -16,17 +16,7 @@
 #seccion-punto-venta { grid-area: punto-venta; }
 #seccion-punto-venta img { width: 100%; }
 
-#banner-principal {
-    height: 100%;
-    background-image: url("https://www.casafe.org/wp-content/uploads/2017/09/foto-medialunas.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    text-align: left;
-    animation-duration: 1s;
-    animation-name: disfuminado;
-    animation-timing-function: ease-in;
-}
+#banner-principal { padding: 0 !important; }
 
 @keyframes disfuminado {
     from { opacity: 0; }
