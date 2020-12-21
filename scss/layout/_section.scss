@@ -7,3 +7,18 @@ section.seccion-centrada, .section.seccion-centrada {
     margin: auto; 
     text-align: center;
 }
+
+.seccion-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.seccion-info img {
+    flex: 1;
+    width: 50%;
+    border-radius: 10px;
+    margin: 1%;
+}
+.seccion-info p {
+    flex: 1;
+}
