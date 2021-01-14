@@ -4,28 +4,31 @@
     flex-wrap: wrap;
     margin: 1rem auto;
     width: 90%;
-}
-.seccion-productos h3 {
-    flex-basis: 100%;
-}
-.seccion-productos article {
-    flex-basis: 23%;
-    margin: 0 1%;
-    padding: 1%;
-    background-color: white;
-    z-index: 1;
-}
-.seccion-productos article img {
-    width: 90%;
-    object-fit: cover;
-    border-radius: 5px;
-}
-.seccion-productos h3 { text-align: left; }
-.seccion-productos article:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 0px 15px lightblue;
-    border-radius: 0.5rem;
-    z-index: 2;
+
+    h3 {
+        flex-basis: 100%;
+        text-align: left;
+    }
+
+    article {
+        flex-basis: 23%;
+        margin: 0 1%;
+        padding: 1%;
+        background-color: white;
+        z-index: 1;
+    
+        img {
+            width: 90%;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+    }
+    article:hover {
+        transform: scale(1.1);
+        box-shadow: 0px 0px 15px lightblue;
+        border-radius: 0.5rem;
+        z-index: 2;
+    }
 }
 
 @media (max-width: $max-pantalla-mediana) {

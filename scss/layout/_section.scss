@@ -1,7 +1,5 @@
-section, .seccion {
-    padding: 1%;
-}
-section.seccion-centrada, .section.seccion-centrada {
+section { padding: 1% }
+section.seccion-centrada {
     width: calc(100% - 2%);
     max-width: 1000px;
     margin: auto; 
@@ -12,13 +10,13 @@ section.seccion-centrada, .section.seccion-centrada {
     display: flex;
     flex-direction: row;
     align-items: center;
-}
-.seccion-info img {
-    flex: 1;
-    width: 50%;
-    border-radius: 10px;
-    margin: 1%;
-}
-.seccion-info p {
-    flex: 1;
+
+    img {
+        flex: 1;
+        width: 50%;
+        border-radius: 10px;
+        margin: 1%;
+    }
+
+    p { flex: 1 }
 }

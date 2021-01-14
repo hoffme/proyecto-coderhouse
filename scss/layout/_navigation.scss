@@ -3,72 +3,73 @@
     background-color: #00000030;
     width: 100%;
     padding: 0.5rem 0;
-}
-.lista-navegacion ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-.lista-navegacion ul li {
-    display: inline-block;
-    padding: 0 1.5rem;
-    vertical-align: middle;
-    position: relative;
-}
-.lista-navegacion ul ul {
-    z-index: 1;
-    position: absolute;
-    display: none;
-    flex-direction: column;
-    background-color: chocolate;
-    border-radius: 5px;
-    box-shadow: 1px 1px 5px black;
-}
-.lista-navegacion ul ul li {
-    display: block;
-    padding: 0.5rem;
-    width: 150px;
-}
-.lista-navegacion ul li:hover ul {
-    display: flex;
-}
-.lista-navegacion a:hover {
-    color: rgb(61, 26, 0);
-}
-.lista-navegacion .icon {
-    display: none;
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            display: inline-block;
+            padding: 0 1.5rem;
+            vertical-align: middle;
+            position: relative;
+        }
+        li:hover ul {
+            display: flex;
+        }
+ 
+        ul {
+            z-index: 1;
+            position: absolute;
+            display: none;
+            flex-direction: column;
+            background-color: chocolate;
+            border-radius: 5px;
+            box-shadow: 1px 1px 5px black;
+
+            li {
+                display: block;
+                padding: 0.5rem;
+                width: 150px;
+            }
+        }
+    }
+
+    a:hover { color: rgb(61, 26, 0) }
+
+    .icon { display: none }
+
+    .button-nav { margin-right: 2% }
 }
 
-.button-nav {
-    margin-right: 2%;
-}
 
 @media screen and (max-width: $max-pantalla-chica) {
     .lista-navegacion ul {
         display: none;
         flex-direction: column;
         align-items: center;
-    }
-    .lista-navegacion ul li {
-        width: 90%;
-        padding: 0.5rem;
-        margin: 0.5rem 0;
-        border-radius: 5px;
-        box-shadow: 1px 1px 5px black;
-    }
-    .lista-navegacion ul ul {
-        width: 90%;
-        justify-content: center;
-    }
-    .lista-navegacion a.icon {
-        float: right;
-        display: block;
-    }
+    
+        li {
+            width: 90%;
+            padding: 0.5rem;
+            margin: 0.5rem 0;
+            border-radius: 5px;
+            box-shadow: 1px 1px 5px black;
+        }
 
-    .lista-navegacion.deplegada>ul {
-        display: flex
+        ul {
+            width: 90%;
+            justify-content: center;
+        }
+
+        a.icon {
+            float: right;
+            display: block;
+        }
     }
+    .lista-navegacion.deplegada>ul { display: flex }
 }

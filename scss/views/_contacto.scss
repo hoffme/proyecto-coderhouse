@@ -6,13 +6,13 @@
     text-align: left;
     display: flex;
     flex-wrap: wrap;
-}
-#formularioContacto div {
-    padding: 1%;
-}
-#formularioContacto .boton-principal {
-    background-color: chocolate;
-    border: chocolate;
+
+    div { padding: 1% }
+
+    .boton-principal {
+        background-color: chocolate;
+        border: chocolate;
+    }
 }
 
 .mapa {
