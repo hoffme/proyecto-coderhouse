@@ -18,5 +18,11 @@ section.seccion-centrada {
         margin: 1%;
     }
 
-    p { flex: 1 }
+    p {
+        flex: 1;
+        font-family: 'Oswald', sans-serif;
+        font-size: 1.5em;
+        padding: 0 3rem;
+        color: rgb(97, 48, 13);
+    }
 }

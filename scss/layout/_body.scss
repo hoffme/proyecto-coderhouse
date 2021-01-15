@@ -1,1 +1,9 @@
-body { background-color: whitesmoke }
+body {
+    background-color: whitesmoke;
+    position: relative;
+    min-height: 100vh;
+
+    main {
+        padding-bottom: 4rem;
+    }
+}
