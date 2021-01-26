@@ -1,4 +1,4 @@
-.lista-navegacion {
+.navegacion {
     display: inline-block;
     background-color: #00000030;
     width: 100%;
@@ -35,41 +35,63 @@
                 display: block;
                 padding: 0.5rem;
                 width: 150px;
+            
+                a:hover { color: rgb(61, 26, 0) }
             }
         }
     }
 
-    a:hover { color: rgb(61, 26, 0) }
-
-    .icon { display: none }
-
-    .button-nav { margin-right: 2% }
+    .button-nav { display: none }
 }
 
 
 @media screen and (max-width: $max-pantalla-chica) {
-    .lista-navegacion ul {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-    
-        li {
-            width: 90%;
-            padding: 0.5rem;
-            margin: 0.5rem 0;
-            border-radius: 5px;
-            box-shadow: 1px 1px 5px black;
-        }
+    .navegacion {
+        padding: 0;
 
         ul {
-            width: 90%;
-            justify-content: center;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+        
+            li {
+                width: 90%;
+                padding: 0.5rem;
+                margin: 0.5rem 0;
+                border-radius: 5px;
+                box-shadow: 1px 1px 5px black;
+            }
+    
+            ul {
+                width: 90%;
+                justify-content: center;
+            }
+    
+            a.icon {
+                float: right;
+                display: block;
+            }
         }
 
-        a.icon {
-            float: right;
+        .button-nav {
             display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translate(-50%, 50%);
+            border-radius: 5px;
+            border: none;
+            background-color: #00000040;
+            padding: 0.5rem;
+            margin: 0;
+
+            .icon {
+                width: 100px;
+                object-fit: contain;
+                max-height: 50px;
+            }
         }
     }
-    .lista-navegacion.deplegada>ul { display: flex }
+    
+    .navegacion.navegacion-abierta > ul { display: flex }
 }

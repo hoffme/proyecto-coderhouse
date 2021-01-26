@@ -6,9 +6,10 @@ footer {
     text-align: center;
     background-image: radial-gradient(circle, chocolate, rgb(133, 70, 25));
     box-shadow: 1px 1px 10px #999;
-    color: white;
+    color: rgb(87, 48, 0);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-size: 0.75em;
 }
