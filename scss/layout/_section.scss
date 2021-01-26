@@ -26,3 +26,8 @@ section.seccion-centrada {
         color: rgb(97, 48, 13);
     }
 }
+
+@media (max-width: $max-pantalla-mediana) {
+    .seccion-info { flex-direction: column; }
+    .seccion-info-revez { flex-direction: column-reverse; }
+}

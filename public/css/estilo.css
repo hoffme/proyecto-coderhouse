@@ -35,7 +35,7 @@ h3 {
     z-index: 1; }
     .seccion-productos article img {
       width: 90%;
-      height: 90%;
+      height: 80%;
       object-fit: cover;
       border-radius: 5px; }
   .seccion-productos article:hover {
@@ -151,8 +151,8 @@ header {
         display: block;
         padding: 0.5rem;
         width: 150px; }
-        .navegacion ul ul li a:hover {
-          color: #3d1a00; }
+    .navegacion ul a:hover {
+      color: #3d1a00; }
   .navegacion .button-nav {
     display: none; }
 
@@ -170,11 +170,14 @@ header {
         border-radius: 5px;
         box-shadow: 1px 1px 5px black; }
       .navegacion ul ul {
-        width: 90%;
+        width: calc(100% - 1rem);
         justify-content: center; }
-      .navegacion ul a.icon {
-        float: right;
-        display: block; }
+        .navegacion ul ul li {
+          width: 90%;
+          padding: 0.5rem;
+          margin: 0.5rem 0;
+          border-bottom: 1px solid rgba(117, 66, 0, 0.5);
+          box-shadow: none; }
     .navegacion .button-nav {
       display: block;
       position: absolute;
@@ -185,11 +188,10 @@ header {
       border: none;
       background-color: #00000040;
       padding: 0.5rem;
-      margin: 0; }
+      height: calc(50px - 0.5rem);
+      width: calc(50px - 0.5rem); }
       .navegacion .button-nav .icon {
-        width: 100px;
-        object-fit: contain;
-        max-height: 50px; }
+        object-fit: contain; }
   .navegacion.navegacion-abierta > ul {
     display: flex; } }
 
@@ -218,6 +220,12 @@ section.seccion-centrada {
     padding: 0 3rem;
     color: #61300d; }
 
+@media (max-width: 992px) {
+  .seccion-info {
+    flex-direction: column; }
+  .seccion-info-revez {
+    flex-direction: column-reverse; } }
+
 #formularioContacto {
   border-radius: 5px;
   padding: 1rem;
@@ -243,32 +251,32 @@ section.seccion-centrada {
   grid-template-columns: auto minmax(100%, 1000px) auto;
   grid-template-rows: auto repeat(4, auto);
   grid-template-areas: "banner banner banner" ". productos ." ". servicios ." ". punto-venta ."; }
-
-#banner-principal {
-  grid-area: banner; }
-
-#seccion-productos {
-  grid-area: productos; }
-
-#seccion-servicios {
-  grid-area: servicios; }
-
-#seccion-servicios img {
-  width: 100%; }
-
-#seccion-punto-venta {
-  grid-area: punto-venta; }
-
-#seccion-punto-venta img {
-  width: 100%; }
-
-#banner-principal {
-  padding: 0 !important; }
-
-#banner-principal img {
-  object-fit: cover;
-  height: 100%;
-  max-height: 80vh; }
+  #home-grid #seccion-productos {
+    grid-area: productos; }
+  #home-grid #seccion-servicios {
+    grid-area: servicios; }
+  #home-grid #seccion-servicios img {
+    width: 100%; }
+  #home-grid #seccion-punto-venta {
+    grid-area: punto-venta; }
+  #home-grid #seccion-punto-venta img {
+    width: 100%; }
+  #home-grid #banner-principal {
+    grid-area: banner;
+    padding: 0 !important; }
+    #home-grid #banner-principal img {
+      object-fit: cover;
+      height: 100%;
+      max-height: 80vh; }
+  #home-grid section a {
+    text-decoration: none; }
+    #home-grid section a label {
+      color: #a55b00;
+      font-weight: bold;
+      margin: 1rem 0;
+      font-size: 1.25em; }
+  #home-grid section a:hover label {
+    color: #c96e00; }
 
 @keyframes disfuminado {
   from {

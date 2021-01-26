@@ -8,19 +8,35 @@
         ". productos ."
         ". servicios ."
         ". punto-venta .";
-}
-#banner-principal { grid-area: banner; }
-#seccion-productos { grid-area: productos; }
-#seccion-servicios { grid-area: servicios; }
-#seccion-servicios img { width: 100%; }
-#seccion-punto-venta { grid-area: punto-venta; }
-#seccion-punto-venta img { width: 100%; }
 
-#banner-principal { padding: 0 !important; }
-#banner-principal img {
-    object-fit: cover;
-    height: 100%;
-    max-height: 80vh;
+
+    #seccion-productos { grid-area: productos; }
+    #seccion-servicios { grid-area: servicios; }
+    #seccion-servicios img { width: 100%; }
+    #seccion-punto-venta { grid-area: punto-venta; }
+    #seccion-punto-venta img { width: 100%; }
+    #banner-principal {
+        grid-area: banner;
+        padding: 0 !important;
+    
+        img {
+            object-fit: cover;
+            height: 100%;
+            max-height: 80vh;
+        }
+    }
+
+    section a {
+        text-decoration: none;
+        
+        label {
+            color: rgb(165, 91, 0);
+            font-weight: bold;
+            margin: 1rem 0;
+            font-size: 1.25em;
+        }
+    }
+    section a:hover label { color: rgb(201, 110, 0) }
 }
 
 @keyframes disfuminado {
