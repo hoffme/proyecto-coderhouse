@@ -6,15 +6,24 @@
     grid-template-areas: 
         "banner banner banner"
         ". productos ."
-        ". servicios ."
-        ". punto-venta .";
+        ". punto-venta ."
+        ". servicios .";
 
 
     #seccion-productos { grid-area: productos; }
     #seccion-servicios { grid-area: servicios; }
     #seccion-servicios img { width: 100%; }
-    #seccion-punto-venta { grid-area: punto-venta; }
-    #seccion-punto-venta img { width: 100%; }
+
+    #seccion-punto-venta {
+        grid-area: punto-venta;
+        text-align: center;
+    }
+    #seccion-punto-venta img {
+        width: 100%;
+        height: 40vh;
+        object-fit: cover;
+    }
+
     #banner-principal {
         grid-area: banner;
         padding: 0 !important;

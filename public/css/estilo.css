@@ -195,14 +195,16 @@ header {
   .navegacion.navegacion-abierta > ul {
     display: flex; } }
 
-section {
-  padding: 1%; }
-
 section.seccion-centrada {
+  padding: 1%;
   width: calc(100% - 2%);
   max-width: 1000px;
   margin: auto;
   text-align: center; }
+
+section.seccion-completa {
+  padding: 0 !important;
+  width: 100%; }
 
 .seccion-info {
   display: flex;
@@ -250,7 +252,7 @@ section.seccion-centrada {
   display: grid;
   grid-template-columns: auto minmax(100%, 1000px) auto;
   grid-template-rows: auto repeat(4, auto);
-  grid-template-areas: "banner banner banner" ". productos ." ". servicios ." ". punto-venta ."; }
+  grid-template-areas: "banner banner banner" ". productos ." ". punto-venta ." ". servicios ."; }
   #home-grid #seccion-productos {
     grid-area: productos; }
   #home-grid #seccion-servicios {
@@ -258,9 +260,12 @@ section.seccion-centrada {
   #home-grid #seccion-servicios img {
     width: 100%; }
   #home-grid #seccion-punto-venta {
-    grid-area: punto-venta; }
+    grid-area: punto-venta;
+    text-align: center; }
   #home-grid #seccion-punto-venta img {
-    width: 100%; }
+    width: 100%;
+    height: 40vh;
+    object-fit: cover; }
   #home-grid #banner-principal {
     grid-area: banner;
     padding: 0 !important; }
